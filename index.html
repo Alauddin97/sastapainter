@@ -7,11 +7,22 @@
     <title>SastaPainter</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <link rel="canonical" href="https://mdbootstrap.com/docs/jquery/tables/pagination/" />
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>-->
+
 </head>
 <script>
     $(function() {
@@ -51,8 +62,9 @@
     
     .index-body {
         background-image: linear-gradient(0deg, rgba(255, 173, 231, 0.3), rgba(2, 173, 231, 0.2)), url("image/1_ImgID2.png");
-        background-size: cover;
+        background-size: 100vw 80vh;
         background-repeat: no-repeat;
+        background-color: cadetblue;
     }
     
     .index-header {
@@ -62,7 +74,7 @@
         letter-spacing: 2px;
         font-size: 25px;
         font-weight: 400;
-        text-transform: uppercase;
+        text-transform: capitalize;
         font-family: 'Finger Paint', cursive;
         color: #ca0000;
     }
@@ -74,23 +86,8 @@
     
     .index-man-image {
         position: absolute;
-        /*margin-left: 25px;*/
+        margin-left: 15px;
         bottom: 0;
-    }
-    
-    .calc_value {
-        width: 260px;
-        padding: 20px;
-        border-radius: 10px;
-        border: none;
-        letter-spacing: 4px;
-        font-size: 25px;
-        text-align: center;
-        color: #ffffff;
-        font-weight: bolder;
-        background: #000000cc;
-        cursor: text;
-        font-family: 'Finger Paint';
     }
     
     .index-flex {
@@ -101,18 +98,21 @@
     }
     
     .button-val {
-        width: 200px;
-        padding: 10px;
+        width: 300px;
+        padding: 20px 30px;
         letter-spacing: 2px;
         font-size: 15px;
         text-transform: uppercase;
         font-family: 'Finger Paint';
-        border: none;
+        border: 6px solid rgba(253, 146, 146, 0.8);
         border-radius: 10px;
-        background-color: #1bac62b8;
+        background-color: #ffffff;
         cursor: pointer;
         font-weight: bolder;
-        color: #ffffff;
+        color: rgba(253, 146, 146, 0.8);
+        margin: 10px;
+        background-position: center;
+        transition: background 0.8s;
     }
     
     .index-range {
@@ -128,22 +128,36 @@
     
     .active,
     .button-val:hover {
-        background-color: #ffffff;
         color: #155341;
+        background: #09ff3480 radial-gradient(circle, transparent 1%, #b7daf7 1%) center/15000%;
+    }
+    
+    .button-val:active {
+        background-color: #c8e3fa;
+        background-size: 100%;
+        transition: background 0s;
     }
     
     table th {
         text-align: left;
         padding-top: 15px;
-        padding: 5px;
+        padding: 20px;
     }
     
     table th label {
         text-transform: uppercase;
         font-family: 'Finger Paint', cursive;
         letter-spacing: 2px;
-        font-size: 15px;
+        font-size: 20px;
         color: #ca0000;
+    }
+    
+    table td {
+        text-transform: capitalize;
+        font-family: 'Finger Paint';
+        letter-spacing: 2px;
+        font-size: 15px;
+        color: ghostwhite;
     }
     
     table td {
@@ -161,201 +175,646 @@
     .ui-widget-header {
         background: #155341;
     }
+    /*==================================================
+ * Effect 8
+ * ===============================================*/
+    
+    .shadow {
+        -moz-box-shadow: inset 0 0 10px #000000;
+        -webkit-box-shadow: inset 0 0 10px #000000;
+        box-shadow: inset 0 0 10px #000000;
+        box-shadow: 0 8px 6px -6px black;
+    }
+    
+    .effect8 {
+        position: relative;
+        -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    }
+    
+    .effect8:before,
+    .effect8:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        top: 10px;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        -moz-border-radius: 100px / 10px;
+        border-radius: 100px / 10px;
+    }
+    
+    .effect8:after {
+        right: 10px;
+        left: auto;
+        -webkit-transform: skew(8deg) rotate(3deg);
+        -moz-transform: skew(8deg) rotate(3deg);
+        -ms-transform: skew(8deg) rotate(3deg);
+        -o-transform: skew(8deg) rotate(3deg);
+        transform: skew(8deg) rotate(3deg);
+    }
+    
+    .flex-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .flex-card {
+        background: #23000094;
+        margin: 10px;
+        width: fit-content;
+    }
+    
+    #first-page {
+        margin: auto 38%;
+        padding: 10px;
+        width: 60%;
+    }
+    
+    #inside-second-page {
+        margin: auto 38%;
+        padding: 10px;
+        width: 60%;
+    }
+    
+    .submit-btn {
+        padding: 15px 30px;
+        letter-spacing: 2px;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-family: 'Finger Paint';
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(40 83 132);
+        background-image: linear-gradient(62deg, rgb(40 83 132) 80%, #E0C3FC 100%);
+        cursor: pointer;
+        font-weight: bolder;
+        color: rgb(253 229 246);
+        margin: 10px;
+        background-position: center;
+        transition: background 0.8s;
+    }
+    
+    .red {
+        background-image: linear-gradient(62deg, rgb(277 1 1) 80%, #E0C3FC 100%);
+    }
+    
+    .green {
+        background-image: linear-gradient(62deg, rgb(24 143 4) 80%, #E0C3FC 100%);
+    }
+    
+    .submit-btn:hover {
+        background-image: linear-gradient(62deg, rgb(40 83 132) 0%, #E0C3FC 100%);
+    }
+    
+    table input[type='number'] {
+        width: 60px;
+        text-align: center;
+        border-radius: 5px;
+    }
+    
+    nav input[type='number'] {
+        width: 150px;
+        text-align: center;
+        border-radius: 5px;
+    }
+    
+    .nav-bar {
+        position: fixed;
+        padding: 10px;
+        background: #f5f5f5ad;
+        height: 50px;
+        width: 100%;
+        top: 0;
+        z-index: 999;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        #first-page {
+            margin: auto;
+            padding: 5px;
+            width: 100%;
+        }
+        #inside-second-page {
+            margin: auto;
+            padding: 5px;
+            width: 100%;
+        }
+        .index-man-image {
+            display: none;
+        }
+    }
 </style>
 
-<body class="index-body">
-    <header class="index-header">
-        <center>
-            <h1>what do you want to paint?</h1>
-        </center>
-    </header>
-    <section class="index-main">
-        <div class="index-flex">
-            <div>
-                <div class="index-man-image">
-                    <div>
-                        <input class="calc_value" type="text" value="Rs 23245 /-" name="calc_value" id="calc_value" disabled>
-                    </div>
-                    <div>
-                        <img src="image/Man.svg" alt="" srcset="">
-                    </div>
+<body class="index-body" onload="flush_all();">
+    <nav class="nav-bar">
+        <div style="position: absolute; right:10%">
+            <span style="font-weight: bolder;color:red;">Total Cost :</span> <span style="font-weight: bolder;color:darkgreen;">Rupees <input type="number" name="total" id="total" value="0" disabled> /- </span>
+        </div>
+    </nav>
+    <div style="height: 30px;">
+
+    </div>
+
+    <div class="index-man-image">
+        <div>
+            <img src="image/Man.svg" alt="" srcset="">
+        </div>
+    </div>
+
+    <!--/////////////////////////////////////////////////////////////////////////////TOP PAGE///////////////////////////////////////////////////-->
+
+    <section id="top-page" style="display:block">
+        <header class="index-header">
+            <center>
+                <h1>Lets Start Quotation</h1>
+            </center>
+        </header>
+
+        <section id="first-page" style="display: block">
+
+            <div class="flex-section">
+                <div class="flex-card effect8">
+                    <table>
+                        <tr style="background: #0000004d;">
+                            <th><label for="">Is your property?</label></th>
+                        </tr>
+                        <tr>
+                            <td><input class="button-val effect8 shadow" type="button" name="commercial" id="commercial" value="Commercial" onclick="property(1);"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="button-val effect8 shadow" type="button" name="residential" id="residential" value="Residential" onclick="property(2);"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="flex-card effect8">
+                    <table>
+                        <tr style="background: #0000004d;">
+                            <th><label for="">what to paint ?</label></th>
+                        </tr>
+                        <tr>
+                            <td><input class="button-val effect8 shadow" type="button" name="interior" id="interior" value="Interior" onclick="paint_type(1);"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="button-val effect8 shadow" type="button" name="exterior" id="exterior" value="Exterior" onclick="paint_type(2);"></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
-            <div class="int_ext">
+            <center>
+                <button class="submit-btn red" type="button" onclick="refresh();"><i class="fa fa-refresh"></i> Reset</button>
+                <button class="submit-btn" type="button" onclick="next_second_page();"> NEXT <i class="fa fa-angle-double-right"></i></button>
+            </center>
+        </section>
+
+    </section>
+
+    <!--/////////////////////////////////////////////////////////////////////////////TOP PAGE///////////////////////////////////////////////////-->
+
+    <!--//////////////////////////////////////////////////////////////////////////Second PAGE///////////////////////////////////////////////////-->
+
+
+    <section id="second-page" style="display:none;">
+        <header class="index-header">
+            <center>
+                <h1>
+                    What do you want to paint will be replaced as Our Sastapainter as it will at your service for Repainting <span id="paint_type" style="color: darkgoldenrod;"></span> of your <span id="property" style="color: darkgoldenrod;"></span>?
+                </h1>
+            </center>
+        </header>
+
+        <section id="inside-second-page">
+
+            <!--////////////////////2nd Page Interior////////////////////////////////-->
+
+            <section id="interior-section" class="flex-card effect8">
                 <table>
-                    <tr>
-                        <th colspan="3"><label for="">type of place :</label></th>
+                    <tr style="background: #0000004d;">
+                        <th colspan="3"><label for="in_wall_type"> What does your wall need ?</label></th>
                     </tr>
                     <tr>
-                        <td>
-                            <button class="button-val" name="resident" id="resident" onclick="calc_val('resident');">
-                                Residential</button>
+                        <td class="form-switch" colspan="2">
+                            <input class="form-check-input form-check-inline" type="radio" name='in_wall_type' id='in_repaint' value="in_repaint" style="margin-left: 20px;" onclick="interior('in_repaint');"><label for="repaint">Re-Paint</label>
                         </td>
-                        <td>
-                            <button class="button-val" name="commercial" id="commercial" onclick="calc_val('commercial');"> Commercial</button>
+                        <td class="form-switch">
+                            <input class="form-check-input form-check-inline" type="radio" name='in_wall_type' id='in_fresh' value="in_fresh" onclick="interior('in_fresh');"><label for="fresh">Fresh</label>
                         </td>
-                        <td></td>
-                    </tr>
-
-                    <tr>
-                        <th colspan="3"><label for="">Sides to paint :</label></th>
                     </tr>
                     <tr>
-                        <td>
-                            <button class="button-val" name="interior" id="interior" onclick="calc_val('interior');"> Interior</button>
+                        <td class="form-switch" colspan="3">
+                            <input class="form-check-input form-check-inline" type="radio" name='in_wall_type' id='in_rental' value="in_rental" style="margin-left: 20px;" onclick="interior('in_rental');"><label for="fresh">Rental</label>
                         </td>
-                        <td>
-                            <button class="button-val" name="exterior" id="exterior" onclick="calc_val('exterior');"> exterior</button>
+                    </tr>
+                    <tr style="background: #0000004d;">
+                        <th colspan="3"><label for="in_no_room"> No. of room ?</label></th>
+                    </tr>
+                    <tr>
+                        <td class="form-switch" colspan="2">
+                            <input class="form-check-input form-check-inline" type="radio" name='in_no_room' id='1BHK' value="1BHK" style="margin-left: 20px;" onchange="interior('1BHK')"><label for="1BHK">1BHK</label>
                         </td>
-                        <td></td>
-                    </tr>
-
-                    <tr>
-                        <th colspan="2"><label for="">type of paint :</label></th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <button class="button-val" name="repaint" id="repaint" onclick="calc_val('repaint');"> Re-paint</button>
+                        <td class="form-switch">
+                            <input class="form-check-input form-check-inline" type="radio" name='in_no_room' id='2BHK' value="2BHK" onchange="interior('2BHK')"><label for="2BHK">2BHK</label>
                         </td>
-                        <td>
-                            <button class="button-val" name="rental" id="rental" onclick="calc_val('rental');"> rental paint</button>
+                    </tr>
+                    <tr>
+                        <td class="form-switch" colspan="2">
+                            <input class="form-check-input form-check-inline" type="radio" name='in_no_room' id='3BHK' value="3BHK" style="margin-left: 20px;" onchange="interior('3BHK')"><label for="3BHK">3BHK</label>
                         </td>
-                        <td><button class="button-val" name="fresh" id="fresh" onclick="calc_val('fresh');"> Fresh Paint</button></td>
-                    </tr>
-
-                    <tr>
-                        <th colspan="3"><label for="">carpet Area :</label></th>
+                        <td class="form-switch">
+                            <input class="form-check-input form-check-inline" type="radio" name='in_no_room' id='1RK' value="1RK" onchange="interior('1RK')"><label for="1RK">1RK</label>
+                        </td>
                     </tr>
                     <tr>
-                        <td colspan="3">
-                            <div>
-                                <input type="text" id="carpet-area" name="carpet-area" readonly class="index-range" style="border:0; font-weight:bold;">
-                                <div id="carpet-area-slider-range"></div>
-                            </div>
+                        <td class="form-switch" colspan="2">
+                            <input class="form-check-input form-check-inline" type="radio" name='in_no_room' id='Duplex' value="Duplex" style="margin-left: 20px;" onchange="interior('Duplex')"><label for="Duplex">Duplex</label>
                         </td>
                     </tr>
 
-                    <tr>
-                        <th colspan="3"><label for="">build up Area :</label></th>
+                    <tr style="background: #0000004d;">
+                        <th colspan="3"><label for="in_ca"> What is the area of carpet?
+                            </label></th>
                     </tr>
                     <tr>
-                        <td colspan="3">
-                            <div>
-                                <input type="text" id="buildup-area" name="buildup-area" readonly class="index-range" style="border:0; font-weight:bold;">
-                                <div id="buildup-area-slider-range"></div>
-                            </div>
+                        <td><label for="in_ca_length">Length </label> <input type="number" name="in_ca" id="in_ca_length" value="0" oninput="interior('in_ca_length')">ft </td>
+                        <td> <label for="in_ca_breadth">Breadth </label><input type="number" name="in_ca" id="in_ca_breadth" value="0" oninput="interior('in_ca_breadth')">ft
+                        </td>
+                    </tr>
+
+                    <tr style="background: #0000004d;">
+                        <th colspan="3"><label for="in_bu"> What is the area of buildup?
+                            </label></th>
+                    </tr>
+                    <tr>
+                        <td><label for="in_bu_height">Height </label> <input type="number" name="in_bu" id="in_bu_height" value="0" oninput="interior('in_bu_height')">ft </td>
+                        <td> <label for="in_bu_breadth">Breadth </label><input type="number" name="in_bu" id="in_bu_breadth" value="0" oninput="interior('in_bu_breadth')">ft
                         </td>
                     </tr>
                 </table>
+                <center>
+                    <button class="submit-btn green" type="button" onclick="back_first_page();"><i class="fa fa-angle-double-left"></i>BACK</button>
+                    <button class="submit-btn" type="button"> NEXT <i class="fa fa-angle-double-right"></i></button>
+                </center>
 
-            </div>
-        </div>
+            </section>
+            <!--////////////////////2nd Page Interior////////////////////////////////-->
+            <!--////////////////////2nd Page Exterior////////////////////////////////-->
+
+            <section id="exterior-section" class="flex-card effect8" style="display:none;">
+                <table>
+                    <tr style="background: #0000004d;">
+                        <th colspan="3"><label for="ex_wall_type"> What does your wall need ?</label></th>
+                    </tr>
+                    <tr>
+                        <td class="form-switch" colspan="2">
+                            <input class="form-check-input form-check-inline" type="radio" name='ex_wall_type' id='ex_repaint' value="repaint" style="margin-left: 20px;" onchange="exterior('ex_repaint');"><label for="repaint">Re-Paint</label>
+                        </td>
+                        <td class="form-switch">
+                            <input class="form-check-input form-check-inline" type="radio" name='ex_wall_type' id='ex_fresh' value="fresh" onchange="exterior('ex_fresh');"><label for="fresh">Fresh</label>
+                        </td>
+                    </tr>
+                    <tr style="background: #0000004d;">
+                        <th colspan="3"><label for="ex_no_floor"> No. of Floors ?</label></th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: right;">Ground + </td>
+                        <td><input type="number" name="ex_no_floor" id="ex_no_floor" value="0" oninput="exterior('ex_no_floor')">floor</td>
+                    </tr>
+                    <tr style="background: #0000004d;">
+                        <th colspan="3"><label for="ex_exterior_wall"> What is the area of exterior wall?
+                            </label></th>
+                    </tr>
+                    <tr>
+                        <td><label for="wall_type">Length </label> <input type="number" name="ex_exterior_wall" id="ex_length" value="0" oninput="exterior('ex_length')">ft </td>
+                        <td> <label for="wall_type">Breadth </label><input type="number" name="ex_exterior_wall" id="ex_breadth" value="0" oninput="exterior('ex_breadth')">ft</td>
+                        <td> <label for="wall_type">Free Space </label> <input type="number" name="ex_exterior_wall" id="ex_free_space" value="0" oninput="exterior('ex_free_space')">ft
+                        </td>
+                    </tr>
+                </table>
+                <center>
+                    <button class="submit-btn green" type="button" onclick="back_first_page();"><i class="fa fa-angle-double-left"></i>BACK</button>
+                    <button class="submit-btn" type="button"> NEXT <i class="fa fa-angle-double-right"></i></button>
+                </center>
+            </section>
+            <!--////////////////////2nd Page Exterior////////////////////////////////-->
+
+        </section>
     </section>
+    <!--//////////////////////////////////////////////////////////////////////////Second PAGE///////////////////////////////////////////////////-->
 
 </body>
-
 <script>
-    function calc_val(x) {
+    function flush_all() {
+        localStorage.removeItem('paint_type_val');
+        localStorage.removeItem('property_val');
+        localStorage.removeItem('total');
+        localStorage.removeItem("ex_wall_need")
+        localStorage.removeItem("ex_no_floor");
+        localStorage.removeItem('ex_exterior_wall');
+        localStorage.removeItem("in_wall_type");
+        localStorage.removeItem("in_no_room")
+        localStorage.removeItem("in_ca");
+        localStorage.removeItem("in_bu");
+        localStorage.removeItem("total_count");
+    }
 
+    function property(x) {
+        var commercial_val = 100;
+        var residential_val = 200;
+        var property_val = 0;
         var total = 0;
 
-        var resident_val = 100;
-        var commercial_val = 200;
+        if (x == '1') {
+            $('#commercial').addClass('active');
+            $('#residential').removeClass('active');
+            property_val = commercial_val;
+            $('#property').html('Commercial');
+        } else {
+            $('#commercial').removeClass('active');
+            $('#residential').addClass('active');
+            $('#property').html('Residence');
+            property_val = residential_val;
+        }
+        localStorage.setItem('property_val', property_val);
+        var paint_type_val = localStorage.getItem('paint_type_val');
+        if (paint_type_val != undefined) {
+            total = parseInt(paint_type_val) + parseInt(property_val);
+        } else {
+            total = parseInt(property_val);
+        }
+        $('#total').val(total);
+        localStorage.setItem('total', total);
+
+    }
+
+    function paint_type(x) {
         var interior_val = 300;
         var exterior_val = 400;
-        var repaint_val = 500;
-        var rental_val = 600;
-        var fresh_val = 700;
-        var carpet_val = 10;
-        var buildup_val = 20;
+        var paint_type_val = 0;
+        var total = 0;
 
-        if (x == '' || x == undefined) {
-            $("#commercial").removeClass("active");
-            $("#resident").removeClass("active");
+        if (x == '1') {
+            $('#interior').addClass('active');
+            $('#exterior').removeClass('active');
+            document.getElementById('interior-section').style.display = 'block';
+            document.getElementById('exterior-section').style.display = 'none';
+            $('#paint_type').html('Interior');
+            paint_type_val = interior_val;
         } else {
-            if (x == "resident") {
-                $("#resident").addClass("active");
-                $("#commercial").removeClass("active");
-                // total = total + resident_val;
-            } else if (x == "commercial") {
-                $("#commercial").addClass("active");
-                $("#resident").removeClass("active");
-                // total = total + commercial_val;
+            $('#interior').removeClass('active');
+            $('#exterior').addClass('active');
+            document.getElementById('interior-section').style.display = 'none';
+            document.getElementById('exterior-section').style.display = 'block';
+            $('#paint_type').html('Exterior');
+            paint_type_val = exterior_val;
+        }
+        localStorage.setItem('paint_type_val', paint_type_val);
+
+        var property_val = localStorage.getItem('property_val');
+        if (property_val != undefined) {
+            total = parseInt(paint_type_val) + parseInt(property_val);
+        } else {
+            total = parseInt(paint_type_val);
+        }
+        $('#total').val(total);
+        localStorage.setItem('total', total);
+    }
+
+    function next_second_page() {
+        var property_val = localStorage.getItem('property_val');
+        var paint_type_val = localStorage.getItem('paint_type_val');
+
+        if (property_val == undefined) {
+            alert("Select the type of property");
+        } else if (paint_type_val == undefined) {
+            alert("Select the type of paint");
+        } else {
+            document.getElementById('top-page').style.display = 'none';
+            document.getElementById('second-page').style.display = 'block';
+        }
+
+    }
+
+    function back_first_page() {
+        document.getElementById('top-page').style.display = 'block';
+        document.getElementById('second-page').style.display = 'none';
+        localStorage.removeItem("ex_wall_need")
+        localStorage.removeItem("ex_no_floor");
+        localStorage.removeItem('ex_exterior_wall');
+        localStorage.removeItem("in_wall_type");
+        localStorage.removeItem("in_no_room")
+        localStorage.removeItem("in_ca");
+        localStorage.removeItem("in_bu");
+        localStorage.removeItem("total_count");
+
+        var total = localStorage.getItem('total');
+        if (total == undefined) {
+            $('#total').val(0);
+        } else {
+            $('#total').val(total);
+        }
+    }
+
+    function exterior(x) {
+        if (x == 'ex_repaint' || x == 'ex_fresh') {
+            var repaint_val = 500;
+            var fresh_val = 600;
+            var ex_wall_need = 0;
+            if (x == 'ex_repaint') {
+                ex_wall_need = parseInt(repaint_val);
+            } else {
+                ex_wall_need = parseInt(fresh_val)
             }
-            if (x == "interior") {
-                $("#interior").addClass("active");
-                $("#exterior").removeClass("active");
-                //total = total + interior_val;
-            } else if (x == "exterior") {
-                $("#exterior").addClass("active");
-                $("#interior").removeClass("active");
-                //total = total + exterior_val;
+            localStorage.setItem("ex_wall_need", ex_wall_need);
+        }
+        if (x == 'ex_no_floor') {
+            var no_floor = parseInt($('#ex_no_floor').val()) + 1;
+            var ex_no_floor_val = 200;
+            var ex_no_floor = 0;
+            if (isNaN(no_floor) || no_floor <= 0) {
+                $('#ex_no_floor').val('0');
+                no_floor = 1;
             }
-            if (x == "repaint") {
-                $("#repaint").addClass("active");
-                $("#rental").removeClass("active");
-                $("#fresh").removeClass("active");
-                //total = total + interior_val;
-            } else if (x == "rental") {
-                $("#rental").addClass("active");
-                $("#repaint").removeClass("active");
-                $("#fresh").removeClass("active");
-                //total = total + exterior_val;
-            } else if (x == "fresh") {
-                $("#fresh").addClass("active");
-                $("#repaint").removeClass("active");
-                $("#rental").removeClass("active");
-                //total = total + exterior_val;
+            ex_no_floor = parseInt(ex_no_floor_val) * no_floor;
+            localStorage.setItem("ex_no_floor", ex_no_floor);
+        }
+        if (x == 'ex_length' || x == 'ex_breadth' || x == 'ex_free_space') {
+            var per_area = 200;
+            var ex_length = parseInt($('#ex_length').val());
+            if (isNaN(ex_length) || ex_length <= 0) {
+                $('#ex_length').val('0');
+                ex_length = 0;
             }
+
+            var ex_breadth = parseInt($('#ex_breadth').val());
+            if (isNaN(ex_breadth) || ex_breadth <= 0) {
+                $('#ex_breadth').val('0');
+                ex_breadth = 0;
+            }
+            var ex_free_space = parseInt($('#ex_free_space').val());
+            if (isNaN(ex_free_space) || ex_free_space <= 0) {
+                $('#ex_free_space').val('0');
+                ex_free_space = 0;
+            }
+
+            var total_area = parseInt(ex_length) * parseInt(ex_breadth) * parseInt(ex_free_space);
+            var ex_exterior_wall = parseInt(total_area) * parseInt(per_area);
+            localStorage.setItem('ex_exterior_wall', ex_exterior_wall);
         }
 
-        var resident = $('#resident').attr("class");
-        var commercial = $('#commercial').attr("class");
-        var interior = $('#interior').attr("class");
-        var exterior = $('#exterior').attr("class");
-        var rental = $('#rental').attr("class");
-        var repaint = $('#repaint').attr("class");
-        var fresh = $('#fresh').attr("class");
-
-
-        var carpet_area = $('#carpet-area').val();
-        carpet_area = carpet_area.replaceAll('sq feet', '');
-        carpet_area = carpet_area.replaceAll(' ', '');
-        carpet_area = carpet_area.split('-');
-        carpet_area = carpet_area[0] * carpet_area[1];
-
-        total = total + (carpet_area * carpet_val);
-
-        var buildup_area = $('#buildup-area').val();
-        buildup_area = buildup_area.replaceAll('sq feet', '');
-        buildup_area = buildup_area.replaceAll(' ', '');
-        buildup_area = buildup_area.split('-');
-        buildup_area = buildup_area[0] * buildup_area[1];
-
-        total = total + (buildup_area * buildup_val);
-
-
-        if (resident == 'button-val active') {
-            total = total + resident_val;
-        } else if (commercial == 'button-val active') {
-            total = total + commercial_val;
+        var a = parseInt(localStorage.getItem("ex_wall_need"));
+        if (isNaN(a) || a <= 0) {
+            a = 0;
         }
-        if (interior == 'button-val active') {
-            total = total + interior_val;
-        } else if (exterior == 'button-val active') {
-            total = total + exterior_val;
+        var b = parseInt(localStorage.getItem("ex_no_floor"));
+        if (isNaN(b) || b <= 0) {
+            b = 0;
         }
-        if (rental == 'button-val active') {
-            total = total + rental_val;
-        } else if (repaint == 'button-val active') {
-            total = total + repaint_val;
-        } else if (fresh == 'button-val active') {
-            total = total + fresh_val;
+        var c = parseInt(localStorage.getItem("ex_exterior_wall"));
+        if (isNaN(c) || c <= 0) {
+            c = 0;
         }
 
+        var d = parseInt(localStorage.getItem("total"));
+        if (isNaN(d) || d <= 0) {
+            d = 0;
+        }
 
-        $('#calc_value').val("Rs " + total + " /-");
+        var total_count = parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d);
+        localStorage.setItem("total_count", total_count);
+        $('#total').val(total_count);
+    }
+
+
+
+    function interior(x) {
+        if (x == 'in_repaint' || x == 'in_fresh' || x == 'in_rental') {
+            var repaint_val = 500;
+            var fresh_val = 600;
+            var rental_val = 800;
+            var in_wall_type = 0;
+            if (x == 'in_repaint') {
+                in_wall_type = parseInt(repaint_val);
+            } else if (x == 'in_fresh') {
+                in_wall_type = parseInt(fresh_val);
+            } else if (x == 'in_rental') {
+                in_wall_type = parseInt(rental_val);
+            }
+            localStorage.setItem("in_wall_type", in_wall_type);
+        }
+
+        if (x == '1BHK' || x == '2BHK' || x == '3BHK' || x == '1RK' || x == 'Duplex') {
+            var one_BHK_val = 500;
+            var two_BHK_val = 600;
+            var three_BHK_val = 800;
+            var one_RK_val = 700;
+            var Duplex_val = 1000;
+            var in_no_room = 0;
+            if (x == '1BHK') {
+                in_no_room = parseInt(one_BHK_val);
+            } else if (x == '2BHK') {
+                in_no_room = parseInt(two_BHK_val);
+            } else if (x == '3BHK') {
+                in_no_room = parseInt(three_BHK_val);
+            } else if (x == '1RK') {
+                in_no_room = parseInt(one_RK_val);
+            } else if (x == 'Duplex') {
+                in_no_room = parseInt(Duplex_val);
+            }
+            localStorage.setItem("in_no_room", in_no_room);
+        }
+        if (x == 'in_ca_length' || x == 'in_ca_breadth') {
+            var per_ca = 100;
+            var in_ca_length = parseInt($('#in_ca_length').val());
+            if (isNaN(in_ca_length) || in_ca_length <= 0) {
+                $('#in_ca_length').val('0');
+                in_ca_length = 0;
+            }
+
+            var in_ca_breadth = parseInt($('#in_ca_breadth').val());
+            if (isNaN(in_ca_breadth) || in_ca_breadth <= 0) {
+                $('#in_ca_breadth').val('0');
+                in_ca_breadth = 0;
+            }
+
+            var total_ca = parseInt(in_ca_length) * parseInt(in_ca_breadth);
+            var in_ca = parseInt(total_ca) * parseInt(per_ca);
+            localStorage.setItem('in_ca', in_ca);
+        }
+
+        if (x == 'in_ca_length' || x == 'in_ca_breadth') {
+            var per_ca = 100;
+            var in_ca_length = parseInt($('#in_ca_length').val());
+            if (isNaN(in_ca_length) || in_ca_length <= 0) {
+                $('#in_ca_length').val('0');
+                in_ca_length = 0;
+            }
+
+            var in_ca_breadth = parseInt($('#in_ca_breadth').val());
+            if (isNaN(in_ca_breadth) || in_ca_breadth <= 0) {
+                $('#in_ca_breadth').val('0');
+                in_ca_breadth = 0;
+            }
+
+            var total_ca = parseInt(in_ca_length) * parseInt(in_ca_breadth);
+            var in_ca = parseInt(total_ca) * parseInt(per_ca);
+            localStorage.setItem('in_ca', in_ca);
+        }
+
+        if (x == 'in_bu_height' || x == 'in_bu_breadth') {
+            var per_bu = 150;
+            var in_bu_height = parseInt($('#in_bu_height').val());
+            if (isNaN(in_bu_height) || in_bu_height <= 0) {
+                $('#in_bu_height').val('0');
+                in_bu_height = 0;
+            }
+
+            var in_bu_breadth = parseInt($('#in_bu_breadth').val());
+            if (isNaN(in_bu_breadth) || in_bu_breadth <= 0) {
+                $('#in_bu_breadth').val('0');
+                in_bu_breadth = 0;
+            }
+
+            var total_bu = parseInt(in_bu_height) * parseInt(in_bu_breadth);
+            var in_bu = parseInt(total_bu) * parseInt(per_bu);
+            localStorage.setItem('in_bu', in_bu);
+        }
+
+        var a = parseInt(localStorage.getItem("in_wall_type"));
+        if (isNaN(a) || a <= 0) {
+            a = 0;
+        }
+        var b = parseInt(localStorage.getItem("in_no_room"));
+        if (isNaN(b) || b <= 0) {
+            b = 0;
+        }
+        var c = parseInt(localStorage.getItem("in_ca"));
+        if (isNaN(c) || c <= 0) {
+            c = 0;
+        }
+
+        var d = parseInt(localStorage.getItem("in_bu"));
+        if (isNaN(d) || d <= 0) {
+            d = 0;
+        }
+
+        var e = parseInt(localStorage.getItem("total"));
+        if (isNaN(e) || e <= 0) {
+            e = 0;
+        }
+
+        var total_count = parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e);
+        localStorage.setItem("total_count", total_count);
+        $('#total').val(total_count);
     }
 </script>
+
 
 </html>
